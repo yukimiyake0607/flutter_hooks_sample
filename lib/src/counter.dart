@@ -9,6 +9,12 @@ class Counter extends StatefulWidget {
 
 class _CounterState extends State<Counter> {
   int count = 0;
+  void addCount() {
+    setState(() {
+      count++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -16,9 +22,7 @@ class _CounterState extends State<Counter> {
         Text('$count'),
         ElevatedButton(
           onPressed: () {
-            setState(() {
-              count++;
-            });
+            addCount();
           },
           child: Icon(Icons.add_box_rounded, size: 20),
         ),
