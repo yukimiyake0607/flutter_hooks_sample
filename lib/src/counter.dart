@@ -19,6 +19,7 @@ class _CounterState extends State<Counter> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Text('Stateful Widget'),
         Text('$count'),
         ElevatedButton(
           onPressed: () {
