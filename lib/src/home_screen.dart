@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks_sample/src/counter/counter.dart';
-import 'package:flutter_hooks_sample/src/counter/counter_hooks.dart';
+import 'package:flutter_hooks_sample/src/feature/counter/counter.dart';
+import 'package:flutter_hooks_sample/src/feature/counter/counter_hooks.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
