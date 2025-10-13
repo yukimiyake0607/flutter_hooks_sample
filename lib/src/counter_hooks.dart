@@ -7,6 +7,14 @@ class CounterHooks extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final counter = useState<int>(0); // useStateで状態管理したい変数を定義
+
+    useEffect(() {
+      debugPrint('カウント：${counter.value}');
+      return () {
+        null;
+      };
+    }, [counter.value]);
+
     return Column(
       children: [
         Text('Hooks'),
