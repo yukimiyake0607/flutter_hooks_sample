@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks_sample/src/counter.dart';
+import 'package:flutter_hooks_sample/src/counter_hooks.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,7 +11,7 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-          child: Column(children: [Counter()]),
+          child: Row(children: [Counter(), CounterHooks()]),
         ),
       ),
     );
