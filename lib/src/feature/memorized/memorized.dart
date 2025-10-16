@@ -3,6 +3,7 @@ import 'package:flutter_hooks_sample/src/feature/memorized/memorized_user.dart';
 import 'package:flutter_hooks_sample/src/feature/memorized/user_list.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+// useMemorized（StatefulWidget版）
 class Memorized extends StatefulWidget {
   const Memorized({super.key});
 
