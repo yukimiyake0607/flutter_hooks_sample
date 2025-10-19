@@ -52,6 +52,7 @@ class _MemorizedState extends State<Memorized> {
         final filteredUsers = _cachedFilteredUsers!;
 
         return Scaffold(
+          appBar: AppBar(title: Text('useMemorized: stfl')),
           body: SafeArea(
             child: Column(
               children: [
