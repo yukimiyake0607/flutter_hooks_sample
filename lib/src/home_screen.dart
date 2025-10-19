@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks_sample/src/feature/counter/counter.dart';
 import 'package:flutter_hooks_sample/src/feature/counter/counter_hooks.dart';
-import 'package:flutter_hooks_sample/src/feature/memorized/memorized.dart';
+import 'package:flutter_hooks_sample/src/feature/memorized/memorized_menu_buttons.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
