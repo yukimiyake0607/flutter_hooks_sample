@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks_sample/src/feature/memorized/memorized.dart';
+import 'package:flutter_hooks_sample/src/feature/memorized/memorized_hooks.dart';
 
 class MemorizedMenuButtons extends StatelessWidget {
   const MemorizedMenuButtons({super.key});
@@ -26,10 +27,10 @@ class MemorizedMenuButtons extends StatelessWidget {
         const SizedBox(height: 8),
         ElevatedButton(
           onPressed: () {
-            // Navigator.push(
-            //   context,
-            //   // MaterialPageRoute(builder: (_) => const UserSearchHooks()),
-            // );
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const MemorizedHooks()),
+            );
           },
           child: const Text('HookWidget版'),
         ),
