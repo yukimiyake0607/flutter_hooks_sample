@@ -29,6 +29,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 const TextEditingControllerMenuButtons(),
+                const Text('disposeを書く必要がない、コントローラを増やしても安全、コードがシンプル'),
               ],
             ),
           ),
