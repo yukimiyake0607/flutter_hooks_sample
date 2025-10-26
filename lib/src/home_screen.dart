@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks_sample/src/feature/animation/animation_controller_menu_buttons.dart';
 import 'package:flutter_hooks_sample/src/feature/counter/counter.dart';
 import 'package:flutter_hooks_sample/src/feature/counter/counter_hooks.dart';
 import 'package:flutter_hooks_sample/src/feature/memorized/memorized_menu_buttons.dart';
@@ -35,6 +36,8 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 const TextEditingControllerMenuButtons(),
                 const Text('disposeを書く必要がない、コントローラを増やしても安全、コードがシンプル'),
+                const SizedBox(height: 20),
+                const AnimationControllerMenuButtons(),
               ],
             ),
           ),
