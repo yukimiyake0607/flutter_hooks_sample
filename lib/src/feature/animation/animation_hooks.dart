@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class AnimationHooks extends HookConsumerWidget {
@@ -6,7 +7,25 @@ class AnimationHooks extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // 自動でdispose, vsync
+    final controller = useAnimationController(
+      duration: const Duration(seconds: 1),
+    );
+
+    final fadeAnimation = useAnimation(
+      Tween<double>(
+        begin: 0.0,
+        end: 1.0,
+      ).animate(CurvedAnimation(parent: controller, curve: Curves.easeIn)),
+    );
     
+    final scaleAnimation = useAnimation(
+      Tween<double>(
+        begin: 0.5,
+        end: 1.0,
+      ).animate(CurvedAnimation(parent: controller, curve: Curves.easeOutBack)),
+    );
+
     return Container();
   }
 }
