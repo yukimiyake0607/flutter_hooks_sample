@@ -52,6 +52,52 @@ class _AnimationStatefulState extends State<AnimationStateful>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text('animation')));
+    return Scaffold(
+      appBar: AppBar(title: const Text('StatefulWidget版')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AnimatedBuilder(
+              animation: _controller,
+              builder: (context, child) {
+                return Opacity(
+                  opacity: _fadeAnimation.value,
+                  child: Transform.scale(
+                    scale: _scaleAnimation.value,
+                    child: Container(
+                      width: 200,
+                      height: 200,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: const Center(
+                        child: Text('👋', style: TextStyle(fontSize: 80)),
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
+            const SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: _playAnimation,
+                  child: const Text('表示'),
+                ),
+                SizedBox(width: 16),
+                ElevatedButton(
+                  onPressed: _reverseAnimation,
+                  child: const Text('非表示'),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
