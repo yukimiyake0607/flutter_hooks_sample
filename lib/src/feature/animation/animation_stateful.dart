@@ -42,6 +42,14 @@ class _AnimationStatefulState extends State<AnimationStateful>
     super.dispose();
   }
 
+  void _playAnimation() {
+    _controller.forward(from: 0.0);
+  }
+
+  void _reverseAnimation() {
+    _controller.reverse(from: 1.0);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(body: Center(child: Text('animation')));
