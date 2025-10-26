@@ -36,6 +36,13 @@ class _AnimationStatefulState extends State<AnimationStateful>
   }
 
   @override
+  void dispose() {
+    // 手動でdispose
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(body: Center(child: Text('animation')));
   }
