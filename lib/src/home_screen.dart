@@ -38,6 +38,8 @@ class HomeScreen extends StatelessWidget {
                 const Text('disposeを書く必要がない、コントローラを増やしても安全、コードがシンプル'),
                 const SizedBox(height: 20),
                 const AnimationControllerMenuButtons(),
+                const Text('Mixin不要、initState不要、dispose不要、AnimateBuilder不要'),
+                const SizedBox(height: 20),
               ],
             ),
           ),
