@@ -4,6 +4,7 @@ import 'package:flutter_hooks_sample/src/feature/callback/callback_menu_buttons.
 import 'package:flutter_hooks_sample/src/feature/counter/counter.dart';
 import 'package:flutter_hooks_sample/src/feature/counter/counter_hooks.dart';
 import 'package:flutter_hooks_sample/src/feature/focus_node/focus_node_menu_buttons.dart';
+import 'package:flutter_hooks_sample/src/feature/listenable/listenable_menu_buttons.dart';
 import 'package:flutter_hooks_sample/src/feature/memorized/memorized_menu_buttons.dart';
 import 'package:flutter_hooks_sample/src/feature/page/page_controller_menu_buttons.dart';
 import 'package:flutter_hooks_sample/src/feature/scroll/scroll_controller_menu_buttons.dart';
@@ -61,6 +62,8 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 const PageControllerMenuButtons(),
                 const Text('disposeとリスナーの削除を自動化'),
+                const SizedBox(height: 20),
+                const ListenableMenuButtons(),
               ],
             ),
           ),
