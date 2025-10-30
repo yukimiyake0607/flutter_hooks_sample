@@ -59,6 +59,7 @@ class HomeScreen extends StatelessWidget {
                 const TabControllerMenuButtons(),
                 const SizedBox(height: 20),
                 const PageControllerMenuButtons(),
+                const Text('disposeとリスナーの削除を自動化'),
               ],
             ),
           ),
