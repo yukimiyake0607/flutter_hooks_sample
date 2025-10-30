@@ -64,6 +64,7 @@ class HomeScreen extends StatelessWidget {
                 const Text('disposeとリスナーの削除を自動化'),
                 const SizedBox(height: 20),
                 const ListenableMenuButtons(),
+                const Text('ほとんど使わない。基本的にはuseStateとRiverpodでカバーできる。'),
               ],
             ),
           ),
