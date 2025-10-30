@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks_sample/src/feature/animation/animation_controller_menu_buttons.dart';
+import 'package:flutter_hooks_sample/src/feature/callback/callback_menu_buttons.dart';
 import 'package:flutter_hooks_sample/src/feature/counter/counter.dart';
 import 'package:flutter_hooks_sample/src/feature/counter/counter_hooks.dart';
 import 'package:flutter_hooks_sample/src/feature/focus_node/focus_node_menu_buttons.dart';
@@ -47,6 +48,8 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 const ScrollControllerMenuButtons(),
                 const Text('dispose不要、リスナー自動削除'),
+                const SizedBox(height: 20),
+                const CallbackMenuButtons(),
               ],
             ),
           ),
