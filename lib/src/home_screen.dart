@@ -6,6 +6,7 @@ import 'package:flutter_hooks_sample/src/feature/counter/counter_hooks.dart';
 import 'package:flutter_hooks_sample/src/feature/focus_node/focus_node_menu_buttons.dart';
 import 'package:flutter_hooks_sample/src/feature/memorized/memorized_menu_buttons.dart';
 import 'package:flutter_hooks_sample/src/feature/scroll/scroll_controller_menu_buttons.dart';
+import 'package:flutter_hooks_sample/src/feature/tab/tab_controller_menu_buttons.dart';
 import 'package:flutter_hooks_sample/src/feature/text_editing/text_editing_controller_menu_buttons.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -53,6 +54,8 @@ class HomeScreen extends StatelessWidget {
                 const Text(
                   'useMemorizedと似ている。特定の値が変わった時のみ新しい関数を作るようにできる。不要な再構築が起きずにパフォーマンスが上がる。',
                 ),
+                const SizedBox(height: 20),
+                const TabControllerMenuButtons(),
               ],
             ),
           ),
