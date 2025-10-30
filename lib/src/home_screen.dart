@@ -4,6 +4,7 @@ import 'package:flutter_hooks_sample/src/feature/counter/counter.dart';
 import 'package:flutter_hooks_sample/src/feature/counter/counter_hooks.dart';
 import 'package:flutter_hooks_sample/src/feature/focus_node/focus_node_menu_buttons.dart';
 import 'package:flutter_hooks_sample/src/feature/memorized/memorized_menu_buttons.dart';
+import 'package:flutter_hooks_sample/src/feature/scroll/scroll_controller_menu_buttons.dart';
 import 'package:flutter_hooks_sample/src/feature/text_editing/text_editing_controller_menu_buttons.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -42,7 +43,10 @@ class HomeScreen extends StatelessWidget {
                 const Text('Mixin不要、initState不要、dispose不要、AnimateBuilder不要'),
                 const SizedBox(height: 20),
                 const FocusNodeMenuButtons(),
-                const Text('Enterキーを押したら次に入力欄へ移動など便利、dispose不要')
+                const Text('Enterキーを押したら次に入力欄へ移動など便利、dispose不要'),
+                const SizedBox(height: 20),
+                const ScrollControllerMenuButtons(),
+                const Text('dispose不要、リスナー自動削除'),
               ],
             ),
           ),
