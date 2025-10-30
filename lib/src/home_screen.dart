@@ -50,6 +50,9 @@ class HomeScreen extends StatelessWidget {
                 const Text('dispose不要、リスナー自動削除'),
                 const SizedBox(height: 20),
                 const CallbackMenuButtons(),
+                const Text(
+                  'useMemorizedと似ている。特定の値が変わった時のみ新しい関数を作るようにできる。不要な再構築が起きずにパフォーマンスが上がる。',
+                ),
               ],
             ),
           ),
