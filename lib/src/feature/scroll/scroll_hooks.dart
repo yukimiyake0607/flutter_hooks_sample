@@ -7,8 +7,9 @@ class ScrollHooks extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final scrollController = ScrollController();
+    final scrollController = useScrollController();
     final showBackToTop = useState(false);
+    final topListItem = useState(0);
 
     useEffect(() {
       void onScroll() {
@@ -26,6 +27,19 @@ class ScrollHooks extends HookConsumerWidget {
       };
     }, []);
 
+    useEffect(() {
+      void changeListItemColor() {
+        final listTileHeight = 80;
+        final offset = scrollController.offset;
+        final itemNum = (offset / listTileHeight).round();
+        topListItem.value = itemNum;
+      }
+
+      scrollController.addListener(changeListItemColor);
+
+      return () => scrollController.removeListener(changeListItemColor);
+    }, [scrollController]);
+
     void scrollToTop() {
       scrollController.animateTo(
         0,
@@ -42,10 +56,17 @@ class ScrollHooks extends HookConsumerWidget {
             controller: scrollController,
             itemCount: 50,
             itemBuilder: (context, index) {
-              return ListTile(
-                leading: CircleAvatar(child: Text('${index + 1}')),
-                title: Text('アイテム ${index + 1}'),
-                subtitle: Text('これは${index + 1}番目のアイテムです'),
+              return SizedBox(
+                height: 80,
+                child: ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor:
+                        topListItem.value == index ? Colors.red : Colors.white,
+                    child: Text('${index + 1}'),
+                  ),
+                  title: Text('アイテム ${index + 1}'),
+                  subtitle: Text('これは${index + 1}番目のアイテムです'),
+                ),
               );
             },
           ),
