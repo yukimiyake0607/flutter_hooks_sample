@@ -28,6 +28,12 @@ TextFieldのコントローラー管理（自動dispose）
 
 スクロール制御（自動dispose）
 
+- useScrollControllerを用意
+- useEffectでスクロールされるたびに実行するメソッドと、addListenerを使用してリスナーを登録、removeListenerで削除
+- 検知したいListViewにscrollControllerを追加
+
+これで、検知したいListViewでスクロールが起きるたびにaddListenerで登録したメソッドが実行される
+
 ## useCallback
 
 関数のメモ化（パフォーマンス最適化）
